@@ -6,13 +6,13 @@ export const SearchBar = () => {
 	const [searchValue, setSearchValue] = useState('')
 	const {searchImageList, loadImageList} = useAppContext()
 	const handleSetSearchValue = (event) => {
-		setSearchValue(event.target.value)
+		setSearchValue(event.target.value);
 	}
 	const handleSearchGiphy = async () => {
 		if(searchValue.length > 0) {
-			await searchImageList({q: searchValue})
+			await searchImageList({q: searchValue});
 		} else {
-			await loadImageList()
+			await loadImageList();
 		}
 	}
 	const handleOnEnter = (e) => {
@@ -20,7 +20,7 @@ export const SearchBar = () => {
 			return handleSearchGiphy();
 		}
 	}
-	const {execute: refreshList} = useAsync({asyncFunction: handleSearchGiphy, immediate:false})
+	const {execute: refreshList} = useAsync({asyncFunction: handleSearchGiphy, immediate:false});
 
  return <div className='search-bar'>
 	 <label for='search'>Search Gifs!</label>

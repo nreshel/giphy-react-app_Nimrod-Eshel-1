@@ -27,7 +27,7 @@ export const ImageList = memo(() => {
 				return (
 					<div key={image.id} className="card_container">
 						{displayAvatar(image?.user)}
-						<img key={image.id} src={image.images.original.url} alt={image.title} className="giphy_image" />
+						<img src={image.images.original.url} alt={image.title} className="giphy_image" />
 					</div>
 				)
 			})}
