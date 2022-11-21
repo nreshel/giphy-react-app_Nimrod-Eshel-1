@@ -32,6 +32,6 @@ export const useAsync = ({ asyncFunction, immediate = true }) => {
 		if (immediate) {
 			execute();
 		}
-	});
+	}, [execute]);
 	return { execute, value, error };
 };

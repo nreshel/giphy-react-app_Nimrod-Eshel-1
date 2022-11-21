@@ -1,9 +1,16 @@
 .image-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    img {
-        margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px;
+    position: relative;
+    .card_container {
+        position: relative;
+        background-color: white;
+        box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;
+        margin: 10px;
+        & > img {
+            width: 100%;
+        }
     }
 }
 
